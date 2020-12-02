@@ -61,7 +61,7 @@ const Post = ({post, user}) => {
   const postID = post.id;
   return(
     <PostContainer>
-      <PostTitle to={`/posts/${postID}`}>{post.title}</PostTitle>
+      <PostTitle to={`/ReactBlog/posts/${postID}`}>{post.title}</PostTitle>
       <PostDate>{new Date(post.createdAt).toLocaleString()}</PostDate>
       <PostDelete onClick={() => handleDelete(postID)}>{user ? '刪除' : ' '}</PostDelete>
     </PostContainer>
