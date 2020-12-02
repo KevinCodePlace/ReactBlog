@@ -26,7 +26,6 @@ const NewPostContent = styled.input`
   word-wrap: break-word;
   width:500px;
   height:300px;
-
   `;
 
 const ErrorMessage = styled.div`

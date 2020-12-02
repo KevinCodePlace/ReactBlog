@@ -28,9 +28,6 @@ const Author = styled.div`
   margin-right:30px;
 `;
 
-const CreateTime = styled.div`
-
-`;
 
 
 
@@ -49,7 +46,7 @@ const SinglePost = ({postID, posts}) => {
       <Title>{currentPost[0].title}</Title>
       <TitleContent>
         <Author>User 編號：{currentPost[0].userId}</Author>
-        <CreateTime>創建時間：{currentTime}</CreateTime>
+        <div>創建時間：{currentTime}</div>
       </TitleContent>
       <div>{currentPost[0].body}</div>
     </Article>
@@ -59,13 +56,13 @@ const SinglePost = ({postID, posts}) => {
 function  timeStampToString (time){
   let datetime = new Date();
    datetime.setTime(time);
-   let year = datetime.getFullYear();
-   let month = datetime.getMonth() + 1;
-   let date = datetime.getDate();
-   let hour = datetime.getHours();
-   let minute = datetime.getMinutes();
-   let second = datetime.getSeconds();
-   let mseconds = datetime.getMilliseconds();
+   const year = datetime.getFullYear();
+   const month = datetime.getMonth() + 1;
+   const date = datetime.getDate();
+   const hour = datetime.getHours();
+   const minute = datetime.getMinutes();
+   const second = datetime.getSeconds();
+   const mseconds = datetime.getMilliseconds();
    return year + "-" + month + "-" + date+" "+hour+":"+minute+":"+second+"."+mseconds;
 };
 

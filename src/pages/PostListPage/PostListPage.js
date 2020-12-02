@@ -78,7 +78,7 @@ const createPaginateArr = (totalPages) => {
   return tempArr;
 };
 
-Post.prototypes = {
+Post.propTypes = {
   post: PropTypes.object
 };
 

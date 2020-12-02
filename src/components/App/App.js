@@ -45,7 +45,7 @@ function App() {
         <Router>
         <Header />
         <Switch>
-          <Route exact path="/" >
+          <Route exact path="/">
             <HomePage posts={posts} setPosts={setPosts}/>
           </Route>
           <Route exact path="/post-list" >

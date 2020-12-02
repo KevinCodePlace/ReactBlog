@@ -18,7 +18,7 @@ const AboutRightPage = styled.div`
   margin-top:30px;
 `
 
-const Aboutme = styled.div`
+const AboutMe = styled.div`
   word-wrap: break-word;
   width:calc(100%-50px);
   padding:30px;
@@ -38,7 +38,7 @@ const AboutPage = () => {
       </AboutLeftPage>
       <AboutRightPage>
         <div>關於我們（取自 Huli）</div>
-        <Aboutme>這是一個技術部落格，重度拖延症患者，興趣是光想不做，有很多想做的事，卻一件都沒有執行。無聊的時候喜歡寫文章，發現自己好像有把事情講得比其他人清楚的能力。相信分享與交流可以讓世界更美好。Medium 文章列表請參考：<a href='https://aszx87410.github.io/blog/medium'>https://aszx87410.github.io/blog/medium</a></Aboutme>
+        <AboutMe>這是一個技術部落格，重度拖延症患者，興趣是光想不做，有很多想做的事，卻一件都沒有執行。無聊的時候喜歡寫文章，發現自己好像有把事情講得比其他人清楚的能力。相信分享與交流可以讓世界更美好。Medium 文章列表請參考：<a href='https://aszx87410.github.io/blog/medium'>https://aszx87410.github.io/blog/medium</a></AboutMe>
         <MePicture></MePicture>
       </AboutRightPage>
     </AboutPageContainer>
