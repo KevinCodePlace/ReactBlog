@@ -48,6 +48,9 @@ function App() {
           <Route exact path="/">
             <HomePage posts={posts} setPosts={setPosts}/>
           </Route>
+          <Route exact path="/ReactBlog">
+            <HomePage posts={posts} setPosts={setPosts}/>
+          </Route>
           <Route exact path="/post-list" >
             <PostListPage />
           </Route>
