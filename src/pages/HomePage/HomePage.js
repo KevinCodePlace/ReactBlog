@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useEffect, useState} from 'react';
 import { AuthContext } from '../../contexts';
-import { deletePost } from '../../WebAPI';
+import { getPosts, deletePost } from '../../WebAPI';
 
 
 const Root = styled.div`
@@ -46,7 +46,9 @@ const PostDelete = styled.div`
 
 `;
 
-const handleDelelte = (postID) => {
+
+
+const handleDelete = (postID) => {
   
   deletePost(postID).then((data) => {
   if(data.ok === 0) { return alert('刪除失敗')};
@@ -61,7 +63,7 @@ const Post = ({post, user}) => {
     <PostContainer>
       <PostTitle to={`/posts/${postID}`}>{post.title}</PostTitle>
       <PostDate>{new Date(post.createdAt).toLocaleString()}</PostDate>
-      <PostDelete onClick={() => handleDelelte(postID)}>{user ? '刪除' : ' '}</PostDelete>
+      <PostDelete onClick={() => handleDelete(postID)}>{user ? '刪除' : ' '}</PostDelete>
     </PostContainer>
   )
 }
@@ -71,8 +73,13 @@ Post.prototypes = {
 };
 
 
-const HomePage = ({ posts }) => {
+const HomePage = ({posts, setPosts}) => {
   const { user, setUser } = useContext(AuthContext); 
+  
+
+  useEffect(() => {
+    getPosts().then(posts => setPosts(posts));
+  },[]);
 
   return(
     <Root>

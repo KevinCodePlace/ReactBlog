@@ -2,7 +2,7 @@ import React,{ useState , useEffect } from 'react';
 import styled from '@emotion/styled';
 import { BrowserRouter as Router, Switch, Route, useParams,} from "react-router-dom";
 import Header from '../Header';
-import { getPosts, getMe } from '../../WebAPI';
+import { getMe } from '../../WebAPI';
 import HomePage from '../../pages/HomePage';
 import PostListPage from '../../pages/PostListPage';
 import AboutPage from '../../pages/AboutPage';
@@ -38,9 +38,6 @@ function App() {
     }));
   },[]);
 
-  useEffect(() => {
-    getPosts().then(posts => setPosts(posts));
-  },[]);
 
   return (
     <AuthContext.Provider value={{ user, setUser}}>
@@ -49,7 +46,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" >
-            <HomePage posts={posts}/>
+            <HomePage posts={posts} setPosts={setPosts}/>
           </Route>
           <Route exact path="/post-list" >
             <PostListPage />
