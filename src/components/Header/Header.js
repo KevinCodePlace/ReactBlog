@@ -69,15 +69,15 @@ const Header = () => {
             <LeftContainer>
                 <Sitename>我的第一個部落格</Sitename>
                 <NavbarList>
-                    <Nav background={location.pathname === '/' ? 'rgba(0,0,0, 0.2)' : ''}  to="/">首頁</Nav>
-                    <Nav background={location.pathname === '/post-list' ? 'rgba(0,0,0, 0.2)' : ''}  to="/post-list">文章列表</Nav>
-                    <Nav background={location.pathname === '/about' ? 'rgba(0,0,0, 0.2)' : ''}  to="/about">關於</Nav>
-                    {user && <Nav background={location.pathname === '/new-post' ? 'rgba(0,0,0, 0.2)' : ''}  to="/new-post">發布文章</Nav>}
+                    <Nav background={location.pathname === 'ReactBlog/' ? 'rgba(0,0,0, 0.2)' : ''}  to="ReactBlog/">首頁</Nav>
+                    <Nav background={location.pathname === 'ReactBlog/post-list' ? 'rgba(0,0,0, 0.2)' : ''}  to="ReactBlog/post-list">文章列表</Nav>
+                    <Nav background={location.pathname === 'ReactBlog/about' ? 'rgba(0,0,0, 0.2)' : ''}  to="ReactBlog/about">關於</Nav>
+                    {user && <Nav background={location.pathname === 'ReactBlog/new-post' ? 'rgba(0,0,0, 0.2)' : ''}  to="ReactBlog/new-post">發布文章</Nav>}
                 </NavbarList>
             </LeftContainer>
             <NavbarList>
-                {!user && <Nav background={location.pathname === '/login' ? 'rgba(0,0,0, 0.2)' : ''} to="/login">登入</Nav>}
-                {!user && <Nav background={location.pathname === '/register' ? 'rgba(0,0,0, 0.2)' : ''} to="/register">註冊</Nav>}
+                {!user && <Nav background={location.pathname === 'ReactBlog/login' ? 'rgba(0,0,0, 0.2)' : ''} to="ReactBlog/login">登入</Nav>}
+                {!user && <Nav background={location.pathname === 'ReactBlog/register' ? 'rgba(0,0,0, 0.2)' : ''} to="ReactBlog/register">註冊</Nav>}
                 {user && <Nav onClick={handleLogout}>登出</Nav>}
             </NavbarList>
         </HeaderContainer>
