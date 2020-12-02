@@ -21,7 +21,7 @@ const PageContainer = styled.div`
 
 
 const BlogPost = (posts) =>{
-  let { slug } = useParams();
+  const { slug } = useParams();
   return <SinglePost postID={slug} posts={posts}/>;
 }
 
