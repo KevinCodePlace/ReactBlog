@@ -45,28 +45,25 @@ function App() {
         <Router>
         <Header />
         <Switch>
-          <Route exact path="/">
-            <HomePage posts={posts} setPosts={setPosts}/>
-          </Route>
           <Route exact path="/ReactBlog">
             <HomePage posts={posts} setPosts={setPosts}/>
           </Route>
-          <Route exact path="/post-list" >
+          <Route exact path="/ReactBlog/post-list" >
             <PostListPage />
           </Route>
-          <Route exact path="/about" >
+          <Route exact path="/ReactBlog/about" >
             <AboutPage />
           </Route>
-          <Route exact path="/new-post" >
+          <Route exact path="/ReactBlog/new-post" >
             <NewPostPage />
           </Route>
-          <Route path="/posts/:slug">
+          <Route path="/ReactBlog/posts/:slug">
             <BlogPost posts={posts}/>
           </Route>
-          <Route exact path="/register">
+          <Route exact path="/ReactBlog/register">
             <RegisterPage />
           </Route>
-          <Route exact path="/login">
+          <Route exact path="/ReactBlog/login">
             <LoginPage />
           </Route>
         </Switch>
